@@ -1,0 +1,24 @@
+---
+const NAVBAR_ITEMS = [
+  { id: "#sobremi", title: "Sobre mi" },
+  { id: "#experiencia", title: "Experiencia" },
+  { id: "#estudios", title: "Estudios" },
+  { id: "#contacto", title: "Contacto" },
+];
+---
+
+<header class="flex justify-center my-5 w-100 hover:cursor-pointer">
+  <nav>
+    <ul class="flex gap-x-3 md:gap-x-5">
+      {
+        NAVBAR_ITEMS.map((item) => {
+          return (
+            <li class="transition duration-300 hover:scale-105 hover:text-sunglow">
+              <a href={item.id}>{item.title}</a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </nav>
+</header>
