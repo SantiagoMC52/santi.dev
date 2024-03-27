@@ -1,14 +1,14 @@
 ---
 const NAVBAR_ITEMS = [
-  { id: "#sobremi", title: "Sobre mi" },
   { id: "#experiencia", title: "Experiencia" },
   { id: "#estudios", title: "Estudios" },
+  { id: "#sobremi", title: "Sobre mi" },
   { id: "#contacto", title: "Contacto" },
 ];
 ---
 
 <header class="flex justify-center my-5 w-100 hover:cursor-pointer">
-  <nav class="fixed">
+  <nav class="fixed z-50">
     <ul class="flex gap-x-3 md:gap-x-5">
       {
         NAVBAR_ITEMS.map((item) => {

@@ -3,17 +3,22 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import Aboutme from "../components/Aboutme.astro";
 ---
 
 <Layout>
   <main class="px-6 md:px-4">
     <div class="space-y-20 sm:space-y-24">
-      <SectionContainer class="mt-5 md:mt-16" id="sobremi">
+      <SectionContainer class="mt-5 md:mt-16">
         <Hero />
       </SectionContainer>
 
       <SectionContainer id="experiencia">
         <Experience />
+      </SectionContainer>
+
+      <SectionContainer id="sobremi">
+        <Aboutme />
       </SectionContainer>
     </div>
   </main>
