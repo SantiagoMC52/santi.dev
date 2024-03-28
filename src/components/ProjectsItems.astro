@@ -30,9 +30,9 @@ const { image, name, tags, description, link } = Astro.props;
         {
           tags.map((tag) => {
             return (
-              <span class="flex gap-1">
-                <tag.icon class="size-5" />
-                <p>{tag.name}</p>
+              <span class="flex gap-2 border rounded-full px-2 py-1 text-white bg-gray-800 border-gray-600 ">
+                <tag.icon class="size-4" />
+                <h6 class="text-xs">{tag.name}</h6>
               </span>
             );
           })
@@ -44,7 +44,7 @@ const { image, name, tags, description, link } = Astro.props;
       <a
         href={link}
         target="_blank"
-        class="inline-flex items-center justify-center gap-2 px-2 py-1 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+        class="inline-flex items-center justify-center gap-2 px-2 py-1 space-x-2 text-md text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
       >
         Preview
       </a>
