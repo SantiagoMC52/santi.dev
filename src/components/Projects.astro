@@ -1,0 +1,37 @@
+---
+import ProjectsItems from "./ProjectsItems.astro";
+import Code from "./icons/CodeIcon.astro";
+
+const PROJECTS = [
+  {
+    image: "/yannick-palahi.png",
+    name: "Yannick Palahí",
+    tags: "REACT, REDUX, SCSS, FIREBASE",
+    description:
+      "Portfolio minimalista hecho para un amigo para su proyecto final de carrera.",
+    link: "https://yannick-palahi.web.app",
+  },
+  {
+    image: "/rick-and-morty.png",
+    name: "Rick and Morty",
+    tags: "REACT, REDUX, SCSS",
+    description:
+      "Web hecha en mis inicios en la programación para practicar el uso de una API",
+    link: "https://rickandmortyexample.netlify.app",
+  },
+];
+---
+
+<div class="max-w-4xl">
+  <div class="flex items-center gap-4 mb-5">
+    <Code class="size-8" />
+    <h4 class="text-3xl font-bold dark:text-white">Proyectos</h4>
+  </div>
+  <ol>
+    {
+      PROJECTS.map((project) => {
+        return <ProjectsItems {...project} />;
+      })
+    }
+  </ol>
+</div>
