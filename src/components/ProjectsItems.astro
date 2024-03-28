@@ -1,8 +1,10 @@
 ---
+import type { Tag } from "../types";
+
 interface Props {
   image: string;
   name: string;
-  tags: string;
+  tags: Tag[];
   description: string;
   link: string;
 }
@@ -22,17 +24,27 @@ const { image, name, tags, description, link } = Astro.props;
       </div>
     </div>
 
-    <div class="w-full md:w-1/2 [&>p]:mb-3">
+    <div class="w-full md:w-1/2">
       <h3 class="text-xl font-bold mb-3">{name}</h3>
-      <p>{tags}</p>
-      <p>
+      <div class="flex gap-3 mb-3">
+        {
+          tags.map((tag) => {
+            return (
+              <span class="flex gap-1">
+                <tag.icon class="size-5" />
+                <p>{tag.name}</p>
+              </span>
+            );
+          })
+        }
+      </div>
+      <p class="mb-4">
         {description}
       </p>
-
       <a
         href={link}
         target="_blank"
-        class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+        class="inline-flex items-center justify-center gap-2 px-2 py-1 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
       >
         Preview
       </a>
