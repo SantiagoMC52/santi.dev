@@ -20,7 +20,7 @@ const TAGS: Tags = {
 
 const PROJECTS = [
   {
-    image: "/yannick-palahi.png",
+    image: "/yannick-palahi.webp",
     name: "Yannick Palahí",
     tags: [TAGS.REACT, TAGS.SASS, TAGS.REDUX],
     description:
@@ -29,7 +29,7 @@ const PROJECTS = [
     github_link: "https://github.com/SantiagoMC52/yannickpalahi"
   },
   {
-    image: "/rick-and-morty.png",
+    image: "/rick-and-morty.webp",
     name: "Rick and Morty",
     tags: [TAGS.REACT, TAGS.SASS],
     description:
