@@ -8,12 +8,12 @@ const NAVBAR_ITEMS = [
 ---
 
 <header class="flex justify-center my-5 w-100 hover:cursor-pointer">
-  <nav class="fixed z-50">
+  <nav id="navbar" class="fixed z-50">
     <ul class="flex gap-x-3 md:gap-x-5">
       {
         NAVBAR_ITEMS.map((item) => {
           return (
-            <li class="transition duration-300 hover:scale-105 hover:text-sunglow">
+            <li class="transition duration-300 hover:scale-105  hover:text-sunglow">
               <a href={item.id}>{item.title}</a>
             </li>
           );
@@ -22,3 +22,34 @@ const NAVBAR_ITEMS = [
     </ul>
   </nav>
 </header>
+
+<script>
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", scrollFunction);
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      navbar!.classList.add(
+        "text-white",
+        "dark:text-black",
+        "dark:bg-white",
+        "bg-gray-800",
+        "px-4",
+        "rounded-full"
+      );
+    } else {
+      navbar!.classList.remove(
+        "text-white",
+        "dark:text-black",
+        "dark:bg-white",
+        "bg-gray-800",
+        "px-4",
+        "rounded-full"
+      );
+    }
+  }
+</script>
