@@ -19,6 +19,9 @@ const { image, name, tags, description, link, github_link } = Astro.props;
     <div class="w-full md:w-1/2">
       <div class="border-2 rounded-md overflow-hidden">
         <img
+          loading="lazy"
+          height="300"
+          width="400"
           src={image}
           alt={`Imagen de ejemplo del proyecto ${name}`}
           class="object-cover w-full h-56 rounded-sm hover:scale-105 transition-transform duration-300 ease-in-out"
@@ -36,7 +39,7 @@ const { image, name, tags, description, link, github_link } = Astro.props;
             return (
               <span class="flex gap-2 border rounded-full px-2 py-1 text-white bg-gray-800 border-gray-600 ">
                 <tag.icon class="size-4" />
-                <h6 class="text-xs">{tag.name}</h6>
+                <span class="text-xs">{tag.name}</span>
               </span>
             );
           })
