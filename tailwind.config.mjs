@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         sunglow: "#FFDC30",
+        lightSunglow: "#EAB308",
       },
     },
   },
