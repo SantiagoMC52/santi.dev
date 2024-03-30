@@ -29,14 +29,17 @@ const mail = "santiagomartinezc54@gmail.com";
   </p>
 
   <nav class="flex flex-col sm:flex-row gap-5 mt-6">
-    <InfoChip chipText="LinkedIn" href={linkedin_link}>
+    <InfoChip href={linkedin_link}>
       <LinkedIn class="size-5" />
+      LinkedIn
     </InfoChip>
-    <InfoChip chipText="Github" href={github_link}>
+    <InfoChip href={github_link}>
       <Github class="size-5" />
+      Github
     </InfoChip>
-    <InfoChip chipText="Contáctame" href=`mailto:${mail}`>
+    <InfoChip href=`mailto:${mail}`>
       <Mail class="size-5" />
+      Contáctame
     </InfoChip>
   </nav>
 </div>
