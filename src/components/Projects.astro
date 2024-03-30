@@ -1,0 +1,20 @@
+---
+import ProjectsItems from "./ProjectsItems.astro";
+import Code from "./icons/CodeIcon.astro";
+
+import PROJECTS from "./constants/projects";
+---
+
+<div class="max-w-4xl">
+  <div class="flex items-center gap-4 mb-5">
+    <Code class="size-8" />
+    <h4 class="text-3xl font-bold text-gray-800 dark:text-white">Proyectos</h4>
+  </div>
+  <ol>
+    {
+      PROJECTS.map((project) => {
+        return <ProjectsItems {...project} />;
+      })
+    }
+  </ol>
+</div>

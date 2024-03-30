@@ -1,0 +1,45 @@
+---
+import InfoChip from "./InfoChip.astro";
+
+import LinkedIn from "./icons/LinkedIn.astro";
+import Github from "./icons/Github.astro";
+import Mail from "./icons/Mail.astro";
+
+const linkedin_link = "https://www.linkedin.com/in/santiago-martinez-correa/";
+const github_link = "https://github.com/SantiagoMC52";
+const mail = "santiagomartinezc54@gmail.com";
+---
+
+<div class="max-w-2xl">
+  <img
+    width="80"
+    height="80"
+    src="/portfolio-image.webp"
+    alt="image"
+    class="rounded-full size-20 mb-5 md:mb-10"
+  />
+  <h1 class="text-4xl font-bold text-gray-800 dark:text-white">
+    Buenas, soy Santiago Martínez
+  </h1>
+  <p
+    class="text-xl mt-4 [&>strong]:text-lightSunglow dark:[&>strong]:text-sunglow text-gray-800 dark:text-gray-300"
+  >
+    Soy un <strong>desarrollador Front-End</strong>. Constantemente aprendiendo
+    y mejorando mis habilidades y procurando tener un código limpio.
+  </p>
+
+  <nav class="flex flex-col sm:flex-row gap-5 mt-6">
+    <InfoChip href={linkedin_link}>
+      <LinkedIn class="size-5" />
+      LinkedIn
+    </InfoChip>
+    <InfoChip href={github_link}>
+      <Github class="size-5" />
+      Github
+    </InfoChip>
+    <InfoChip href=`mailto:${mail}`>
+      <Mail class="size-5" />
+      Contáctame
+    </InfoChip>
+  </nav>
+</div>
