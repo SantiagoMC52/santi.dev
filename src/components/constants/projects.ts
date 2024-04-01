@@ -27,16 +27,7 @@ const PROJECTS = [
       "Portfolio minimalista hecho para un amigo para su proyecto final de carrera.",
     link: "https://yannick-palahi.web.app",
     github_link: "https://github.com/SantiagoMC52/yannickpalahi"
-  },
-  {
-    image: "/rick-and-morty.webp",
-    name: "Rick and Morty",
-    tags: [TAGS.REACT, TAGS.SASS],
-    description:
-      "Web hecha en mis inicios en la programación para practicar el uso de una API.",
-    link: "https://rickandmortyexample.netlify.app",
-    github_link:"https://github.com/SantiagoMC52/api-practice"
-  },
+  }
 ];
 
 export default PROJECTS;
