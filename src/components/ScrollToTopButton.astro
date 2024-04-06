@@ -1,0 +1,32 @@
+---
+import ArrowUp from "./icons/ArrowUp.astro";
+---
+
+<button
+  onclick="topFunction()"
+  id="scroll-top"
+  class="flex justify-center items-center fixed bottom-10 right-5 z-50 text-gray-800 dark:text-gray-300 bg-lightSunglow rounded-full size-10"
+>
+  <ArrowUp />
+</button>
+
+<script is:inline>
+  const scrollTopBtn = document.getElementById("scroll-top");
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  window.addEventListener("scroll", scrollFunction);
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 500 ||
+      document.documentElement.scrollTop > 500
+    ) {
+      scrollTopBtn.style.display = "flex";
+    } else {
+      scrollTopBtn.style.display = "none";
+    }
+  }
+</script>
