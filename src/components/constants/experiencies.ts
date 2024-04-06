@@ -3,7 +3,7 @@ const EXPERIENCES = [
     date: "mayo 2022 - actualmente",
     company: "Eurofirms Group",
     description:
-      "Desarrollo de la nueva página web de cornerjob. Utilizando ReatcJS, NextJS, typescript con Material UI. Los repositorios se alojan en Azure y para el control de versiones se utilizó Git.",
+      "Desarrollo de la nueva página web de Cornerjob, un portal de empleo. Utilizando ReactJS, NextJS, TypeScript y Material UI. Los repositorios se alojan en Azure y para el control de versiones se utiliza Git.",
     position: "Desarrollador Front-end",
   },
   {
@@ -17,7 +17,7 @@ const EXPERIENCES = [
     date: "Febrero de 2019 - abril de 2019",
     company: "Umbrella digital partner",
     description:
-      "Prácticas del ciclo de DAW en las que tenía que mantener y actualizar páginas web junto a sus bases de datos. Desarrollo web en WordPress y PrestaShop.",
+      "Prácticas del ciclo de Desarrollo de aplicaciones web (DAW) en las que tenía que mantener y actualizar páginas web junto a sus bases de datos. Desarrollo web en WordPress y PrestaShop.",
     position: "Desarrollador Front-end",
   },
 ];
