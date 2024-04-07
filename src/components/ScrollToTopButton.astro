@@ -14,19 +14,15 @@ import ArrowUp from "./icons/ArrowUp.astro";
   const scrollTopBtn = document.getElementById("scroll-top");
 
   function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
-  window.addEventListener("scroll", scrollFunction);
 
   function scrollFunction() {
-    if (
-      document.body.scrollTop > 500 ||
-      document.documentElement.scrollTop > 500
-    ) {
-      scrollTopBtn.style.display = "flex";
-    } else {
-      scrollTopBtn.style.display = "none";
-    }
+    scrollTopBtn.style.display = window.scrollY > 500 ? "flex" : "none";
   }
+
+  window.addEventListener("load", function () {
+    window.addEventListener("scroll", scrollFunction);
+    scrollFunction();
+  });
 </script>
