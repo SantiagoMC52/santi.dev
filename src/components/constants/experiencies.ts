@@ -3,7 +3,7 @@ const EXPERIENCES = [
     date: "mayo 2022 - actualmente",
     company: "Eurofirms Group",
     description:
-      "Desarrollo de la nueva página web de Cornerjob, un portal de empleo. Utilizando ReactJS, NextJS, TypeScript y Material UI. Los repositorios se alojan en Azure y para el control de versiones se utiliza Git.",
+      "Actualmente desarrollo el nuevo ATS (Applicant Tracking System) de la empresa utilizando AngularJS y TypeScript, aplicando las últimas funcionalidades del framework. Además, me encargo del desarrollo y mantenimiento de librerías internas de componentes en Angular. Anteriormente, desarrollé la página web de Cornerjob, el portal de empleo, utilizando ReactJS, NextJS, TypeScript y Material UI. Los repositorios se alojan en Azure y para el control de versiones se utiliza Git.",
     position: "Desarrollador Front-end",
   },
   {
