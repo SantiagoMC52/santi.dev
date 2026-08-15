@@ -3,26 +3,47 @@ import ArrowUp from "./icons/ArrowUp.astro";
 ---
 
 <button
-  onclick="topFunction()"
+  type="button"
   id="scroll-top"
-  class="flex justify-center items-center fixed bottom-10 right-5 z-50 text-gray-800 dark:text-gray-300 bg-lightSunglow rounded-full size-10"
+  aria-label="Volver arriba"
+  class="hidden justify-center items-center fixed bottom-10 right-5 z-50 text-gray-800 dark:text-gray-300 bg-lightSunglow rounded-full size-10"
 >
   <ArrowUp />
 </button>
 
-<script is:inline>
+<script>
   const scrollTopBtn = document.getElementById("scroll-top");
 
-  function topFunction() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+  if (scrollTopBtn) {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-  function scrollFunction() {
-    scrollTopBtn.style.display = window.scrollY > 500 ? "flex" : "none";
-  }
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: reducedMotion.matches ? "auto" : "smooth",
+      });
+    });
 
-  window.addEventListener("load", function () {
-    window.addEventListener("scroll", scrollFunction);
-    scrollFunction();
-  });
+    let ticking = false;
+
+    const updateVisibility = () => {
+      const isVisible = window.scrollY > 500;
+      scrollTopBtn.classList.toggle("flex", isVisible);
+      scrollTopBtn.classList.toggle("hidden", !isVisible);
+      ticking = false;
+    };
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(updateVisibility);
+        }
+      },
+      { passive: true }
+    );
+
+    updateVisibility();
+  }
 </script>
