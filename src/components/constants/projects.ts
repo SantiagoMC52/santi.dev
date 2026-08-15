@@ -1,6 +1,7 @@
 import Astrojs from "../icons/Astrojs.astro";
 import Tailwind from "../icons/Tailwind.astro";
-import type { Tags } from "../../types";
+import yannickPalahiImage from "../../assets/yannick-palahi.webp";
+import type { Project, Tags } from "../../types";
 
 const TAGS: Tags = {
   ASTRO: {
@@ -13,9 +14,9 @@ const TAGS: Tags = {
   },
 };
 
-const PROJECTS = [
+const PROJECTS: Project[] = [
   {
-    image: "/yannick-palahi.webp",
+    image: yannickPalahiImage,
     name: "Yannick Palahí",
     tags: [TAGS.ASTRO, TAGS.TAILWIND],
     description:
