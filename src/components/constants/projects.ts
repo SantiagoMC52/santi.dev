@@ -1,20 +1,15 @@
-import Reactjs from "../icons/Reactjs.astro";
-import Redux from "../icons/Redux.astro";
-import Sass from "../icons/Sass.astro";
+import Astrojs from "../icons/Astrojs.astro";
+import Tailwind from "../icons/Tailwind.astro";
 import type { Tags } from "../../types";
 
 const TAGS: Tags = {
-  REACT: {
-    name: "ReactJS",
-    icon: Reactjs,
+  ASTRO: {
+    name: "Astro",
+    icon: Astrojs,
   },
-  SASS: {
-    name: "SASS",
-    icon: Sass,
-  },
-  REDUX: {
-    name: "Redux",
-    icon: Redux,
+  TAILWIND: {
+    name: "Tailwind CSS",
+    icon: Tailwind,
   },
 };
 
@@ -22,11 +17,11 @@ const PROJECTS = [
   {
     image: "/yannick-palahi.webp",
     name: "Yannick Palahí",
-    tags: [TAGS.REACT, TAGS.SASS, TAGS.REDUX],
+    tags: [TAGS.ASTRO, TAGS.TAILWIND],
     description:
       "Portfolio minimalista hecho para un amigo para su proyecto final de carrera.",
-    link: "https://yannick-palahi.web.app",
-    github_link: "https://github.com/SantiagoMC52/yannickpalahi"
+    link: "https://yannick-palahi.netlify.app/",
+    github_link: "https://github.com/SantiagoMC52/yannickpalahiweb"
   }
 ];
 
