@@ -6,7 +6,7 @@ const NAVBAR_ITEMS = [
 ];
 ---
 
-<header class="flex justify-center my-5 w-100 hover:cursor-pointer">
+<header class="flex justify-center my-5 w-full hover:cursor-pointer">
   <nav id="navbar" class="fixed z-50">
     <ul class="flex gap-x-4 md:gap-x-8">
       {
@@ -25,30 +25,38 @@ const NAVBAR_ITEMS = [
 <script>
   const navbar = document.getElementById("navbar");
 
-  window.addEventListener("scroll", scrollFunction);
+  if (navbar) {
+    const SCROLLED_CLASSES = [
+      "text-white",
+      "dark:text-black",
+      "dark:bg-white",
+      "bg-gray-800",
+      "px-4",
+      "rounded-full",
+    ];
 
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
-    ) {
-      navbar!.classList.add(
-        "text-white",
-        "dark:text-black",
-        "dark:bg-white",
-        "bg-gray-800",
-        "px-4",
-        "rounded-full"
-      );
-    } else {
-      navbar!.classList.remove(
-        "text-white",
-        "dark:text-black",
-        "dark:bg-white",
-        "bg-gray-800",
-        "px-4",
-        "rounded-full"
-      );
-    }
+    let ticking = false;
+
+    const updateNavbar = () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add(...SCROLLED_CLASSES);
+      } else {
+        navbar.classList.remove(...SCROLLED_CLASSES);
+      }
+      ticking = false;
+    };
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(updateNavbar);
+        }
+      },
+      { passive: true }
+    );
+
+    updateNavbar();
   }
 </script>
