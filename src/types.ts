@@ -15,5 +15,5 @@ export type Project = {
   tags: Tag[];
   description: string;
   link: string;
-  github_link: string;
+  github_link?: string;
 };
